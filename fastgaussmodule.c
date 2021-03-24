@@ -15,15 +15,15 @@ static PyMethodDef fastgaussMethods[] = {
     {"quickermaths",  fastgauss_quickermaths, METH_VARARGS,
      "Gauss"},
     
-    {NULL, NULL, 0, NULL}        /* Sentinel */
+    {NULL, NULL, 0, NULL}        
 };
 
 
 static struct PyModuleDef fastgaussmodule = {
     PyModuleDef_HEAD_INIT,
-    "lelc",   /* name of module */
-    NULL, /* module documentation, may be NULL */
-    -1,       /* size of per-interpreter state of the module,
+    "fastgaussmodule",   
+    NULL, 
+    -1,       
                  or -1 if the module keeps state in global variables. */
     fastgaussMethods
 };
@@ -44,22 +44,19 @@ main(int argc, char *argv[])
         exit(1);
     }
 
-    /* Add a built-in module, before Py_Initialize */
+    
     if (PyImport_AppendInittab("fastgaussmodule", PyInit_fastgaussmodule) == -1) {
         fprintf(stderr, "Error: could not extend in-built modules table\n");
         exit(1);
     }
 
-    /* Pass argv[0] to the Python interpreter */
+   
     Py_SetProgramName(program);
 
-    /* Initialize the Python interpreter.  Required.
-       If this step fails, it will be a fatal error. */
+   
     Py_Initialize();
 
-    /* Optionally import the module; alternatively,
-       import can be deferred until the embedded script
-       imports it. */
+    
     
     if (!PyImport_ImportModule("fastgaussmodule")) {
         PyErr_Print();
