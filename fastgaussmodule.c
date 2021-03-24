@@ -7,7 +7,7 @@ static PyObject * fastgauss_quickermaths(PyObject *self, PyObject *args)
     if (!PyArg_ParseTuple(args, "i", &n)) {
         return NULL;
     }
-    return PyLong_FromLong((n*(n-1))/2);
+    return PyLong_FromLong((n*(n+1))/2);
 }
 
 static PyMethodDef fastgaussMethods[] = {
