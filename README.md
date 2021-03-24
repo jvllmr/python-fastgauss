@@ -6,7 +6,7 @@ In his [YouTube-Video](https://www.youtube.com/watch?v=Qgevy75co8c) mCoding said
 His conclusion was that it is faster to just calculate the outcome of the loop.
 But there actually is another way to get faster by doing the calculation in C and importing the function into Python.
 I built this example which calculates the gaussian formula in two different ways to prove / show it.
-As I'm not an expert in C I mostly made this example by following [this Guide](https://docs.python.org/3/extending/extending.html) from the offical Python Dcoumentation.
+As I'm not an expert in C I mostly made this example by following [this Guide](https://docs.python.org/3/extending/extending.html) from the offical Python Documentation.
 
 If you know a way to do it better / get faster feel free to make a pull request! :slightly_smiling_face:
 

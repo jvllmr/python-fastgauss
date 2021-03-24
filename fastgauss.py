@@ -12,5 +12,5 @@ if __name__ == "__main__":
     delta = python_time - c_time
 
     print("Python only: "+ str(python_time) + " seconds")
-    print("With Module coded in C: "+ str(c_time) + " seconds")
-    print("The implementation with the C-Module was faster by " + str(delta) + " seconds!")
+    print("With Extension coded in C: "+ str(c_time) + " seconds")
+    print("The implementation with the C-Extension was faster by " + str(delta) + " seconds!")
