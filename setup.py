@@ -12,4 +12,6 @@ for folder in listdir(build_dir):
     for filename in listdir(build_dir+folder):
         if ".so" in filename:
             copy2(build_dir+folder+"/"+filename,project_root+"fastgaussmodule.so")
+        elif ".pyd" in filename:
+            copy2(build_dir+folder+"/"+filename,project_root+"fastgaussmodule.pyd")
 print("Setup successful!")

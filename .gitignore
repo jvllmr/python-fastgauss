@@ -1,3 +1,4 @@
 /.dist
 build
 fastgaussmodule.so
+fastgaussmodule.pyd

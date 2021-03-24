@@ -23,8 +23,7 @@ static struct PyModuleDef fastgaussmodule = {
     PyModuleDef_HEAD_INIT,
     "fastgaussmodule",   
     NULL, 
-    -1,       
-                 or -1 if the module keeps state in global variables. */
+    -1,
     fastgaussMethods
 };
 
